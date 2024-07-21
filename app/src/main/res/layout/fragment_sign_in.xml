@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.signInFragment"
+    android:background="@color/yellow"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sign_in_const"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintGuide_begin="@dimen/_16sdp"
+            android:orientation="vertical"
+            android:id="@+id/g1"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintGuide_end="@dimen/_16sdp"
+            android:orientation="vertical"
+            android:id="@+id/g2"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/blinkIt_image"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blinkit_typo"
+            android:layout_marginTop="@dimen/_50sdp"
+            app:layout_constraintStart_toStartOf="@id/g1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Slogan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/india_s_last_minute_app"
+            android:textSize="@dimen/_24sdp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/blinkIt_image"
+            app:layout_constraintTop_toBottomOf="@id/blinkIt_image"
+            android:layout_marginTop="-30dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_lets_singin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/let_s_sign_in"
+            android:textSize="@dimen/_26sdp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:letterSpacing="0.03"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/txt_Slogan"
+            app:layout_constraintEnd_toEndOf="@id/g2"
+            app:layout_constraintTop_toBottomOf="@id/txt_Slogan"
+            android:layout_marginTop="50dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mobile_num_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/g2"
+            app:layout_constraintStart_toStartOf="@id/txt_lets_singin"
+            app:layout_constraintTop_toBottomOf="@id/txt_lets_singin"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:backgroundTint="@color/input_bG_tint"
+            app:cardCornerRadius="@dimen/_5sdp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+                app:startIconDrawable="@drawable/call_icon"
+                app:startIconTint="@color/input_text_tint"
+                android:layout_margin="@dimen/_8sdp"
+                app:boxStrokeColor="@color/input_text_tint"
+                app:cursorColor="@color/input_text_tint">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMobileNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:maxLength="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_send_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/send_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:backgroundTint="@color/green"
+            app:cornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="@id/mobile_num_layout"
+            app:layout_constraintEnd_toEndOf="@id/mobile_num_layout"
+            app:layout_constraintTop_toBottomOf="@id/mobile_num_layout"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

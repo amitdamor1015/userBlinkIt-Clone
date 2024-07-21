@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.otpFragment"
+    android:background="@color/white">
+
+   <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/guide_line_start"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       app:layout_constraintGuide_begin="16dp" />
+
+   <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/guide_line_end"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       app:layout_constraintGuide_end="16dp" />
+
+   <com.google.android.material.appbar.MaterialToolbar
+       android:id="@+id/topAppBar"
+       style="@style/Widget.MaterialComponents.Toolbar.Primary"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:backgroundTint="@color/yellow"
+       android:textAlignment="center"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:navigationIcon="@drawable/back_icon"
+       app:navigationIconTint="@color/white"
+       app:title="OTP VERIFICATION"
+       app:titleCentered="true"
+       app:titleTextColor="@color/white" />
+
+   <androidx.appcompat.widget.AppCompatImageView
+       android:id="@+id/otpImageView"
+       android:layout_width="wrap_content"
+       android:layout_height="@dimen/_120sdp"
+       android:layout_marginTop="@dimen/_40sdp"
+       android:src="@drawable/otp_shield_illu"
+       app:layout_constraintEnd_toEndOf="@id/guide_line_end"
+       app:layout_constraintHorizontal_bias="0.502"
+       app:layout_constraintStart_toStartOf="@id/guide_line_start"
+       app:layout_constraintTop_toBottomOf="@id/topAppBar" />
+
+   <TextView
+       android:id="@+id/tv_otp_text"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="@+id/otpImageView"
+       app:layout_constraintStart_toStartOf="@+id/otpImageView"
+       app:layout_constraintTop_toBottomOf="@+id/otpImageView"
+       android:layout_marginTop="1dp"
+       android:text="iuhraiuhew \njiagyagug"
+       android:textColor="@color/text_tint"
+       android:textSize="@dimen/_14sdp"
+       android:gravity="center"/>
+
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:id="@+id/ll_otp"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       app:layout_constraintEnd_toEndOf="@+id/guide_line_end"
+       app:layout_constraintStart_toStartOf="@+id/guide_line_start"
+       app:layout_constraintTop_toBottomOf="@+id/tv_otp_text"
+       android:gravity="center"
+       android:layout_marginTop="@dimen/_5sdp">
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+          app:boxBackgroundColor="@color/otp_bg_tint"
+          app:boxStrokeColor="@color/green"
+          app:cursorColor="@color/green">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/et_otp_1"
+             android:layout_width="@dimen/_35sdp"
+             android:layout_height="match_parent"
+             android:inputType="number"
+             android:gravity="center"
+             android:textSize="@dimen/_16sdp"
+             android:textColor="@color/text_tint"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+          app:boxBackgroundColor="@color/otp_bg_tint"
+          app:boxStrokeColor="@color/green"
+          app:cursorColor="@color/green"
+          android:layout_marginStart="-5dp">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/et_otp_2"
+             android:layout_width="@dimen/_35sdp"
+             android:layout_height="match_parent"
+             android:inputType="number"
+             android:gravity="center"
+             android:textSize="@dimen/_16sdp"
+             android:textColor="@color/text_tint"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+          app:boxBackgroundColor="@color/otp_bg_tint"
+          app:boxStrokeColor="@color/green"
+          app:cursorColor="@color/green"
+          android:layout_marginStart="-5dp">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/et_otp_3"
+             android:layout_width="@dimen/_35sdp"
+             android:layout_height="match_parent"
+             android:inputType="number"
+             android:gravity="center"
+             android:textSize="@dimen/_16sdp"
+             android:textColor="@color/text_tint"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+          app:boxBackgroundColor="@color/otp_bg_tint"
+          app:boxStrokeColor="@color/green"
+          app:cursorColor="@color/green"
+          android:layout_marginStart="-5dp">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/et_otp_4"
+             android:layout_width="@dimen/_35sdp"
+             android:layout_height="match_parent"
+             android:inputType="number"
+             android:gravity="center"
+             android:textSize="@dimen/_16sdp"
+             android:textColor="@color/text_tint"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+          app:boxStrokeColor="@color/green"
+          app:cursorColor="@color/green"
+          app:boxBackgroundColor="@color/otp_bg_tint"
+          android:layout_marginStart="-5dp">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/et_otp_5"
+             android:layout_width="@dimen/_35sdp"
+             android:layout_height="match_parent"
+             android:inputType="number"
+             android:gravity="center"
+             android:textSize="@dimen/_16sdp"
+             android:textColor="@color/text_tint"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+          app:boxBackgroundColor="@color/otp_bg_tint"
+          app:boxStrokeColor="@color/green"
+          app:cursorColor="@color/green"
+          android:layout_marginStart="-5dp">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/et_otp_6"
+             android:layout_width="@dimen/_35sdp"
+             android:layout_height="match_parent"
+             android:inputType="number"
+             android:gravity="center"
+             android:textSize="@dimen/_16sdp"
+             android:textColor="@color/text_tint"/>
+      </com.google.android.material.textfield.TextInputLayout>
+
+   </androidx.appcompat.widget.LinearLayoutCompat>
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btn_Otpverify"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="@string/verify_now"
+    android:textColor="@color/input_text_tint"
+    android:backgroundTint="@color/green"
+    app:cornerRadius="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    app:layout_constraintTop_toBottomOf="@id/ll_otp"
+    app:layout_constraintStart_toStartOf="@id/ll_otp"
+    app:layout_constraintEnd_toEndOf="@id/ll_otp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

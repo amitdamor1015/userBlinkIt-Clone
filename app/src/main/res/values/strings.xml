@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BlinkIt</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="india_s_last_minute_app">India\'s last minute app</string>
+    <string name="let_s_sign_in">Let\'s Sign In</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="send_code">Send code</string>
+    <string name="verify_now">Verify Now</string>
+</resources>
